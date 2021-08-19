@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Projet02.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style4 {
+            width: 100%;
+        }
+
+        .auto-style8 {
+            height: 198px;
+        }
+        .auto-style9 {
+            height: 178px;
+            width: 163px;
+            margin-top: 0px;
+        }
+        .auto-style10 {
+            height: 182px;
+        }
+        .auto-style11 {
+            height: 182px;
+            width: 164px;
+        }
+        .auto-style12 {
+            width: 100%;
+            height: 38px;
+            margin-top: 0px;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="auto-style4">
+                <tr>
+                    <td class="auto-style8" style="background-color: #008080; text-align: center;">
+                        <h1>
+                            <asp:Label ID="titreLabel" runat="server" Text="Projet Gamers"></asp:Label>
+                        </h1>
+                        <asp:Image ID="logoImage" runat="server" Height="57px" ImageUrl="~/Resources/logo.jpg" Width="68px" />
+                        <br />
+                        <h2>
+                            <asp:Label ID="sousTitreLabel" runat="server" Text="Elite Games - Yves D.Khira"></asp:Label>
+                        </h2>
+                        <p>
+                            <asp:Label ID="enteteLabel" runat="server" Text="Entete page"></asp:Label>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+              
+        </div>
+    <table class="auto-style12">
+        <tr>
+            <td class="auto-style11"> <div class="auto-style9" style="background-color: #808080">
+                            <br />
+                            <br />
+                            <br />
+                            <asp:Menu ID="gameMenu" runat="server" DynamicHoverStyle-ForeColor ="Salmon" BackColor="#F7F640" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" OnMenuItemClick="Menu1_MenuItemClick" StaticSubMenuIndent="10px">
+                                <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                <DynamicMenuStyle BackColor="#F7F6F3" />
+                                <DynamicSelectedStyle BackColor="#5D7B9D" />
+                                <Items>
+                                    <asp:MenuItem Text="Clients" Value="Clients" NavigateUrl="~/Clients.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Employés" Value="Employés" NavigateUrl="~/Employes.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Information" Value="Information" NavigateUrl="~/Information.aspx"></asp:MenuItem>
+                                </Items>
+                                <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" BorderColor="#CC00FF" />
+                                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                <StaticSelectedStyle BackColor="#5D7B9D" />
+                            </asp:Menu>
+                        
+                        </div></td>
+            <td class="auto-style10" style="background-color: #800080">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+    </body>
+</html>
